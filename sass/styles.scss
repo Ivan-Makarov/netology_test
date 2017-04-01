@@ -1,0 +1,117 @@
+$purple1: #97529d;
+$purple2: #6c539f;
+$red: #da4678;
+$blue: #00afee;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.slide {
+    // height: 100vh;
+    position: relative;
+    padding: 50px 100px;
+    &.cover {
+        margin-bottom: 20px;
+        // background: url('../img/netology_logo_white.png') no-repeat 95% 50px/50px;
+                    // linear-gradient(45deg, $purple1 0%, $purple2 100%);
+        background: linear-gradient(60deg, $purple2 0%, $purple1 100%);
+        color: #ffffff;
+        &.front {
+            text-transform: uppercase;
+        }
+    }
+    // font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 0;
+}
+
+h2 {
+    position: relative;
+    max-width: 70;
+    padding-left: 1em;
+    &:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "\2014";
+    }
+}
+
+h3 {
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    &:before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 5px;
+        background: $red;
+    }
+}
+
+h4,
+p {
+    margin-bottom: 10px;
+}
+
+em {
+    color: $blue;
+    font-style: normal;
+}
+
+.term {
+    font-weight: 700;
+}
+
+.two-columns-item {
+    display: inline-block;
+    position: relative;
+    width: 49%;
+    vertical-align: top;
+    padding-left: 1em;
+    &:before {
+        position: absolute;
+        top: 5px;
+        left: 0;
+        display: block;
+        content: '';
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: $blue;
+    }
+}
+
+ol {
+    counter-reset: list-counter;
+    list-style: none;
+    li {
+        position: relative;
+        margin-bottom: 15px;
+        padding-left: 40px;
+        &:before {
+            box-sizing: border-box;
+            position: absolute;
+            top: 0;
+            left: 0px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            counter-increment: list-counter;
+            content: counter(list-counter);
+            color: #ffffff;
+            background: $red;
+        }
+    }
+}
